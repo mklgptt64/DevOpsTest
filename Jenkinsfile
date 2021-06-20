@@ -24,7 +24,7 @@ pipeline {
              script {
                  sshagent(['5032774f-44b4-44e6-ba78-492b4c3bcbec']) {
                  sh '''
-                    ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" root@10.54.71.147 < /var/lib/jenkins/workspace/test2/mukul.sh
+                    sshpass -p "sonus1" ssh -o "StrictHostKeyChecking=no" root@10.54.71.147 < /var/lib/jenkins/workspace/test2/mukul.sh
                     '''
                  }
            }
