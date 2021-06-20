@@ -1,0 +1,11 @@
+- hosts: webservers
+#  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Get Hostname
+      shell: echo $HOSTNAME
+      register: result
+    - name: Print the Var
+      debug:
+       var: result
