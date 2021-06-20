@@ -24,7 +24,7 @@ pipeline {
              script {
                  sshagent(['5032774f-44b4-44e6-ba78-492b4c3bcbec']) {
                  sh '''
-                    sshpass -p "sonus1" ssh -o "StrictHostKeyChecking=no" root@10.54.71.147 < /var/lib/jenkins/workspace/test_git_jenkins/ansible playbook test.yaml
+                    sshpass -p "sonus1" ssh -o "StrictHostKeyChecking=no" root@10.54.71.147 < /var/lib/jenkins/workspace/test_git_jenkins/playbook.sh
                     '''
                  }
            }
