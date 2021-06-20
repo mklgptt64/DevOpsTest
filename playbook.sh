@@ -1,4 +1,4 @@
 #! /bin/bash
 
 cd /root
-ansible-playbook test.yml
+ansible-playbook test.yaml
