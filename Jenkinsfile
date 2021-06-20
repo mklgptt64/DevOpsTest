@@ -19,6 +19,17 @@ pipeline {
            }
 }
 }
+         stage ("ssh to ansible server") {
+         steps {
+           script {
+               sshagent(['5032774f-44b4-44e6-ba78-492b4c3bcbec'])
+               sh '''
+                  ssh -p 2024 root@10.54.71.147 < /var/lib/jenkins/workspace/test2/mukul.sh
+                  '''
+            
+           }
+}
+}
 
 
     }
